@@ -1,15 +1,19 @@
 """
 Script 19: Rebuild Full ICD-10 and RxNorm Databases from source files
 - ICD-10: Parse icd102019en.xml (ClaML format)
-- RxNorm: Parse RRF files (RXNCONSO.RRF, RXNREL.RRF)
+- RxNorm: Parse RRF files (RXNCONSO.RRF, RXNREL.RRF, RXNSAT.RRF)
 - Then rebuild FAISS indexes
 """
 import json
 import os
+import sys
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Set
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 ICD10_XML = os.path.join(PROJECT_ROOT, "databases", "icd10_vn", "icd102019en.xml")
 ICD10_DB = os.path.join(PROJECT_ROOT, "databases", "icd10_vn", "icd10_database.json")
 RXNORM_RRF = os.path.join(PROJECT_ROOT, "databases", "rxnorm", "rrf")
@@ -169,10 +173,15 @@ def parse_rxnorm_rrf():
     """Parse RxNorm RRF files to extract all drugs."""
     print("\n=== Parsing RxNorm RRF files ===")
 
-    # Try prescribe RRF first (newer), then regular RRF
-    rrf_dir = RXNORM_PRESCRIBE_RRF if os.path.exists(RXNORM_PRESCRIBE_RRF) else RXNORM_RRF
+    # Prefer full RRF directory over prescribe subset
+    if os.path.exists(os.path.join(RXNORM_RRF, "RXNCONSO.RRF")):
+        rrf_dir = RXNORM_RRF
+    elif os.path.exists(os.path.join(RXNORM_PRESCRIBE_RRF, "RXNCONSO.RRF")):
+        rrf_dir = RXNORM_PRESCRIBE_RRF
+    else:
+        rrf_dir = RXNORM_RRF
+
     conso_path = os.path.join(rrf_dir, "RXNCONSO.RRF")
-    rel_path = os.path.join(rrf_dir, "RXNREL.RRF")
     sat_path = os.path.join(rrf_dir, "RXNSAT.RRF")
 
     print(f"  Using RRF directory: {rrf_dir}")
@@ -205,19 +214,19 @@ def parse_rxnorm_rrf():
         print(f"  WARNING: {conso_path} not found")
 
     # Step 2: Read RXNSAT.RRF for additional attributes (ingredients, doses, forms)
-    # Columns: RXCUI|LUI|SUI|ATUI|ATN|SAB|ATV|SUPPRESS|CVF
+    # Columns: RXCUI|LUI|SUI|RXAUI|STYPE|CODE|ATUI|SATUI|ATN|SAB|ATV|SUPPRESS|CVF
     attributes = {}  # rxcui -> {atn: atv}
     if os.path.exists(sat_path):
         print(f"  Reading {sat_path}...")
         with open(sat_path, "r", encoding="utf-8", errors="replace") as f:
             for line in f:
                 parts = line.strip().split("|")
-                if len(parts) < 8:
+                if len(parts) < 11:
                     continue
                 rxcui = parts[0].strip()
-                sab = parts[5].strip()
-                atn = parts[4].strip()
-                atv = parts[6].strip()
+                atn = parts[8].strip()
+                sab = parts[9].strip()
+                atv = parts[10].strip()
 
                 if sab != "RXNORM":
                     continue
@@ -226,17 +235,19 @@ def parse_rxnorm_rrf():
                 attributes[rxcui][atn] = atv
         print(f"  Found attributes for {len(attributes)} concepts")
 
-    # Step 3: Filter for clinical drug forms (SBD, SCD, BPCK, GPCK)
-    # These are the most useful for NER linking
-    drug_tty = {"SBD", "SCD", "BPCK", "GPCK", "SBDG", "SCDG"}
+    # Step 3: Filter for clinical drug forms and ingredients
+    drug_tty = {
+        "SBD", "SCD", "BPCK", "GPCK", "SBDG", "SCDG",
+        "BN", "IN", "PIN", "MIN", "DF", "SCDF", "SBDF",
+        "SBDC", "SCDC", "PSN", "SY", "TMSY"
+    }
     drugs = {}
 
     for rxcui, info in concepts.items():
         tty = info["tty"]
         name = info["name"]
 
-        # Include clinical drugs and semantic brands
-        if tty in drug_tty or tty in {"BN", "IN", "PIN"}:
+        if tty in drug_tty:
             attrs = attributes.get(rxcui, {})
 
             # Extract generic name from ingredient or use the name itself

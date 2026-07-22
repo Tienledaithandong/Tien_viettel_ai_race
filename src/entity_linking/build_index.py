@@ -163,9 +163,12 @@ def build_index(
 
     print(f"Building index for {len(entries)} entries...")
 
-    # Load model
-    model = SentenceTransformer(model_name)
-    print(f"  Loaded model: {model_name}")
+    import torch
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    if device == "cuda" and batch_size == 32:
+        batch_size = 128
+    print(f"  Loaded model: {model_name} on device: {device} (batch_size={batch_size})")
+    model = SentenceTransformer(model_name, device=device)
 
     # Encode all texts
     texts = [e["embedding_text"] for e in entries]
