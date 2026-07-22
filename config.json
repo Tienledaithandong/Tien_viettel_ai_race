@@ -1,0 +1,20 @@
+{
+    "ner": {
+        "llm_models": ["qwen2.5:7b"],
+        "llm_url": "http://localhost:11434",
+        "transformer_models": [],
+        "n_runs": 3
+    },
+    "entity_linking": {
+        "embedding_model": "BAAI/bge-m3",
+        "cross_encoder_model": "BAAI/bge-reranker-v2-m3",
+        "top_k": 5
+    },
+    "assertion": {
+        "use_classifier": false,
+        "window_size": 50
+    },
+    "normalization": {
+        "enabled": true
+    }
+}

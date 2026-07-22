@@ -1,0 +1,594 @@
+{
+  "version": "1.0",
+  "abbreviations": {
+    "BN": "bệnh nhân",
+    "nam": "nam giới",
+    "nữ": "nữ giới",
+    "tuổi": "tuổi",
+    "t/m": "tình trạng",
+    "t/th": "tình trạng",
+    "v/p": "vào phòng",
+    "k/n": "khám nervous",
+    "x/n": "xét nghiệm",
+    "s/o": "sinh offspring",
+    "s/s": "sinh sống",
+    "g/n": "gia đình",
+    "n/n": "người nhà",
+    "n/c": "nhịp tim",
+    "mạch": "mạch",
+    "h/a": "huyết áp",
+    "hpt": "huyết áp tĩnh mạch",
+    "spO2": "độ bão hòa oxy máu",
+    "RR": "nhịp thở",
+    "HR": "nhịp tim",
+    "T": "nhiệt độ",
+    "BMI": "chỉ số khối cơ thể",
+    "BS": "bác sĩ",
+    "PGS": "phó giáo sư",
+    "TS": "tiền sử",
+    "BSCK": "bác sĩ chuyên khoa",
+    "BSII": "bác sĩ nội trú",
+    "ho": "ho",
+    "h剧": "ho kịch phát",
+    "đm": "đờm",
+    "kn": "khó thở",
+    "kn khi cc": "khó thở khi gắng sức",
+    "knmj": "khó thở mức độ",
+    "kn về đêm": "khó thở về đêm",
+    "kn tư thế": "khó thở tư thế nằm",
+    "kn cấp tính": "khó thở cấp tính",
+    "dd": "đau đầu",
+    "đầu": "đau đầu",
+    "đj": "đau ngực",
+    "j": "đau",
+    "j ng": "đau bụng trên",
+    "j bụng": "đau bụng",
+    "j bụng dưới": "đau bụng dưới",
+    "j hạ sườn phải": "đau hạ sườn phải",
+    "j bụng quanh rốn": "đau quanh rốn",
+    "nôn": "nôn",
+    "bn": "buồn nôn",
+    "tiểu": "tiểu tiện",
+    "tiểu nhiều": "tiểu nhiều",
+    "tiểu rắt": "tiểu rắt",
+    "tiểu máu": "tiểu máu",
+    "sốt": "sốt",
+    "sj": "sốt",
+    "sđ": "sốt cao",
+    "mệt": "mệt mỏi",
+    "mệt mỏi": "mệt mỏi",
+    "chóng mặt": "chóng mặt",
+    "cm": "chóng mặt",
+    "hoa mắt": "hoa mắt",
+    "đpresión": "chán ăn",
+    "mất ngủ": "mất ngủ",
+    "m/n": "mất ngủ",
+    "gầy sút": "gầy sút",
+    "phù": "phù",
+    "phù 2 chi dưới": "phù 2 chi dưới",
+    "phù toàn thân": "phù toàn thân",
+    "tê bì": "tê bì",
+    "tê": "tê",
+    "yếu": "yếu",
+    "yếu 1 chi": "yếu 1 chi",
+    "đau nhức": "đau nhức",
+    "đau âm ỉ": "đau âm ỉ",
+    "đau quặn": "đau quặn",
+    "đau dữ dội": "đau dữ dội",
+    "ợ hơi": "ợ hơi",
+    "ợ nóng": "ợ nóng",
+    "đái dầm": "đái dầm",
+    "tiết": "tiết",
+    "tiết nhiều": "tiết nhiều",
+    "khát": "khát nước",
+    "khát nước": "khát nước",
+    "sụt cân": "sụt cân",
+    "tăng cân": "tăng cân",
+    "nóng": "nóng",
+    "lạnh": "lạnh",
+    "rùng mình": "rùng mình",
+    "vã mồ hôi": "vã mồ hôi",
+    "chán ăn": "chán ăn",
+    "đổ mồ hôi": "đổ mồ hôi",
+    "mờ mắt": "mờ mắt",
+    "tai": "tai",
+    "mũi": "mũi",
+    "họng": "họng",
+    "viêm": "viêm",
+    "sưng": "sưng",
+    "đỏ": "đỏ",
+    "ngứa": "ngứa",
+    "phát ban": "phát ban",
+    "ban": "ban",
+    "loét": "loét",
+    "khám": "khám",
+    "thăm": "thăm",
+    "thăm外部": "thăm外部",
+    "nghe": "nghe",
+    "gõ": "gõ",
+    "sờ": "sờ",
+    "nhận": "nhận",
+    "cảm nhận": "cảm nhận",
+    "tiếng": "tiếng",
+    "tim": "tim",
+    "phổi": "phổi",
+    "bụng": "bụng",
+    "gan": "gan",
+    "lách": "lách",
+    "thận": "thận",
+    "WBC": "bạch cầu",
+    "RBC": "hồng cầu",
+    "Hb": "hemoglobin",
+    "Hgb": "hemoglobin",
+    "Hct": "hematocrit",
+    "Plt": "tiểu cầu",
+    "PLT": "tiểu cầu",
+    "NEUT": "bạch cầu trung tính",
+    "LYMPH": "bạch cầu lympho",
+    "MONO": "bạch cầu đơn nhân",
+    "EOS": "bạch cầu ưa axit",
+    "BASO": "bạch cầu ưa kiềm",
+    "RDW": "phân bố hồng cầu",
+    "MPV": "thể tích tiểu cầu trung bình",
+    "ESR": "tốc độ máu lắng",
+    "CRP": "protein C phản ứng",
+    "PCT": "calcitonin",
+    "Procalcitonin": "calcitonin",
+    "BSR": "tốc độ máu lắng",
+    "AST": "transaminase",
+    "ALT": "transaminase",
+    "GGT": "gamma glutamyl transferase",
+    "ALP": "phosphatase kiềm",
+    "Bilirubin": "bilirubin",
+    "Creatinine": "creatinine",
+    "BUN": "urê nitrogen",
+    "Urea": "urê",
+    "Glucose": "đường huyết",
+    "HbA1c": "hemoglobin glycated",
+    "Lipid": "lipid",
+    "TC": "tổng cholesterol",
+    "TG": "thông qua",
+    "HDL": "lipoprotein mật độ cao",
+    "LDL": "lipoprotein mật độ thấp",
+    "Na": "natri",
+    "K": "kali",
+    "Cl": "clorua",
+    "Ca": "canxi",
+    "Phosphorus": "photpho",
+    "Mg": "miligam",
+    "Iron": "sắt",
+    "TIBC": "tổng khả năng gắn sắt",
+    "TSH": "hormone kích thích tuyến giáp",
+    "FT4": "thyroxine tự do",
+    "FT3": "triiodothyronine tự do",
+    "Anti-TPO": "antibody anti-peroxidase",
+    "Anti-TG": "antibody anti-thyroglobulin",
+    "BNP": "peptide natriuretic",
+    "NT-proBNP": "NT-proBNP",
+    "Troponin": "troponin",
+    "D-dimer": "D-dimer",
+    "PT": "phẫu thuật",
+    "INR": "tỉ số quốc tế",
+    "aPTT": "thời gian thromboplastin",
+    "Fibrinogen": "fibrinogen",
+    "Amylase": "amylase",
+    "Lipase": "lipase",
+    "CPK": "kinase cơ",
+    "CK-MB": "kinase cơ tim",
+    "LDH": "lactate dehydrogenase",
+    "UA": "phân tích nước tiểu",
+    "XNPT": "xét nghiệm nước tiểu",
+    "cấy": "cấy",
+    "CXR": "chụp X-quang ngực",
+    "XQ": "X-quang",
+    "CT": "chụp cắt lớp",
+    "CT scan": "chụp cắt lớp vi tính",
+    "MRI": "chụp cộng hưởng từ",
+    "US": "siêu âm",
+    "SA": "siêu âm",
+    "Sieu am": "siêu âm",
+    "Echo": "siêu âm tim",
+    "ECG": "điện tim",
+    "EKG": "điện tim",
+    "EEG": "điện não",
+    "EMG": "điện cơ",
+    "PTTM": "phẫu thuật thuật nội soi",
+    "mổ": "phẫu thuật",
+    "mổ开放": "phẫu thuật mở",
+    "nội soi": "nội soi",
+    "sinh thiết": "sinh thiết",
+    "chọc dò": "chọc dò",
+    "chọc hút": "chọc hút",
+    "đặt Sonde": "đặt sonde",
+    "sh": "sonde",
+    "sonde": "sonde",
+    " truyền": "truyền",
+    " truyền dịch": "truyền dịch",
+    "truyền máu": "truyền máu",
+    "máu": "máu",
+    "TĐA": "tăng huyết áp",
+    "THA": "tăng huyết áp",
+    "TĐ": "tiểu đường",
+    "ĐTĐ": "đái tháo đường",
+    "ĐMP": "đau thồi ngực",
+    "SOT": "suy tim",
+    "TN": "thận",
+    "TN mạn": "thận mạn",
+    "UT": "ung thư",
+    "UT phổi": "ung thư phổi",
+    "UT vú": "ung thư vú",
+    "UT đại tràng": "ung thư đại tràng",
+    "UT dạ dày": "ung thư dạ dày",
+    "TB": "lao",
+    "lao": "lao",
+    "lao phổi": "lao phổi",
+    "COPD": "bệnh phổi tắc nghẽn mạn",
+    "hen": "hen phế quản",
+    "VA": "viêm amidan",
+    "VX": "viêm xoang",
+    "VDD": "viêm dạ dày",
+    "VNNT": "viêm não não",
+    "VRPT": "viêm ruột thừa",
+    "VSPT": "viêm túi mật",
+    "Sỏi": "sỏi",
+    "Viêm": "viêm",
+    "Nhiễm trùng": "nhiễm trùng",
+    "mg": "miligam",
+    "mcg": "micrôgam",
+    "g": "gam",
+    "ml": "mililít",
+    "U": "đơn vị",
+    "IU": "đơn vị quốc tế",
+    "MEQ": "milli-ekvivalent",
+    "MCG": "micrôgam",
+    "MG": "miligam",
+    "PO": "đường uống",
+    "po": "đường uống",
+    "uống": "đường uống",
+    "SL": "đường dưới lưỡi",
+    "IV": "truyền tĩnh mạch",
+    "iv": "truyền tĩnh mạch",
+    "IM": "tiêm bắp",
+    "im": "tiêm bắp",
+    "SC": "tiêm dưới da",
+    "sc": "tiêm dưới da",
+    "TI": "tiêm",
+    "tid": "3 lần/ngày",
+    "bid": "2 lần/ngày",
+    "qd": "1 lần/ngày",
+    "qid": "4 lần/ngày",
+    "prn": "theo yêu cầu",
+    "hs": "trước khi đi ngủ",
+    "qhs": "trước khi đi ngủ",
+    "qam": "buổi sáng",
+    "qpm": "buổi tối",
+    "ac": "trước ăn",
+    "pc": "sau ăn",
+    "daily": "hàng ngày",
+    "wk": "tuần",
+    "mo": "tháng",
+    "mmHg": "mmHg",
+    "bpm": "nhịp/phút",
+    "l/mm3": "lớn/mm3",
+    "/mm3": "/mm3",
+    "g/dL": "gam/decilít",
+    "g/l": "gam/lít",
+    "mg/dL": "miligam/decilít",
+    "mmol/l": "milimol/lít",
+    "mEq/l": "milli-ekvivalent/lít",
+    "µmol/l": "micromol/lít",
+    "U/L": "đơn vị/lít",
+    "IU/L": "đơn vị quốc tế/lít",
+    "ng/mL": "nanôgam/mililít",
+    "pg/mL": "picôgam/mililít",
+    "mạn": "mạn tính",
+    "cấp": "cấp tính",
+    "nặng": "nặng",
+    "nhẹ": "nhẹ",
+    "trung bình": "trung bình",
+    "ổn": "ổn định",
+    "không ổn": "không ổn định",
+    "đang": "đang",
+    "đã": "đã",
+    "có": "có",
+    "không": "không",
+    "bệnh": "bệnh",
+    "tiền sử": "tiền sử",
+    "treatment": "điều trị",
+    "điều trị": "điều trị",
+    "DT": "điều trị",
+    "NV": "nhập viện",
+    "XN": "xét nghiệm",
+    "NS": "nội soi",
+    "CM": "chẩn đoán",
+    "KĐ": "chẩn đoán",
+    "chẩn đoán": "chẩn đoán",
+    "tieuduong": "tiểu đường",
+    "tieu duong": "tiểu đường",
+    "huyet ap": "huyết áp",
+    "ha huyet ap": "hạ huyết áp",
+    "thoat vi": "thoát vị",
+    "viem": "viêm",
+    "sot": "sốt",
+    "dau": "đau",
+    "kho tho": "khó thở",
+    "ho khan": "ho khan",
+    "ho dom": "ho đờm",
+    "nôn ói": "nôn ói",
+    "tieu chay": " tiêu chảy",
+    "tao bon": "táo bón"
+  },
+  "synonym_groups": [
+    {
+      "standard": "tăng huyết áp",
+      "synonyms": [
+        "THA",
+        "TĐA",
+        "hypertension",
+        "high blood pressure",
+        "tăng áp"
+      ]
+    },
+    {
+      "standard": "đái tháo đường typ 2",
+      "synonyms": [
+        "ĐTĐ type 2",
+        "DM type 2",
+        "tiểu đường type 2",
+        "diabetes type 2",
+        "T2DM"
+      ]
+    },
+    {
+      "standard": "đái tháo đường typ 1",
+      "synonyms": [
+        "ĐTĐ type 1",
+        "DM type 1",
+        "tiểu đường type 1",
+        "diabetes type 1",
+        "T1DM"
+      ]
+    },
+    {
+      "standard": "đau thồi ngực",
+      "synonyms": [
+        "ĐMP",
+        "angina",
+        "angina pectoris",
+        "đau ngực",
+        "chest pain"
+      ]
+    },
+    {
+      "standard": "nhồi máu cơ tim",
+      "synonyms": [
+        "MI",
+        "myocardial infarction",
+        "nhồi máu cơ tim cấp",
+        "AMI",
+        "STEMI",
+        "NSTEMI"
+      ]
+    },
+    {
+      "standard": "suy tim",
+      "synonyms": [
+        "SOT",
+        "heart failure",
+        "HF",
+        "suytim"
+      ]
+    },
+    {
+      "standard": "rung nhĩ",
+      "synonyms": [
+        "AF",
+        "AFib",
+        "atrial fibrillation",
+        "rungnhĩ"
+      ]
+    },
+    {
+      "standard": "bệnh phổi tắc nghẽn mạn",
+      "synonyms": [
+        "COPD",
+        "copd",
+        "bệnh phổi tắc nghẽn"
+      ]
+    },
+    {
+      "standard": "hen phế quản",
+      "synonyms": [
+        "hen",
+        "asthma",
+        "bronchial asthma",
+        "hen suyễn"
+      ]
+    },
+    {
+      "standard": "viêm phổi",
+      "synonyms": [
+        "pneumonia",
+        "VPT",
+        "viêm phổi cấp"
+      ]
+    },
+    {
+      "standard": "trào ngược dạ dày thực quản",
+      "synonyms": [
+        "GERD",
+        "gerd",
+        "trào ngược",
+        "reflux"
+      ]
+    },
+    {
+      "standard": "viêm dạ dày",
+      "synonyms": [
+        "gastritis",
+        "VDD",
+        "viêm élèm"
+      ]
+    },
+    {
+      "standard": "sỏi thận",
+      "synonyms": [
+        "kidney stones",
+        "renal calculi",
+        "sỏi niệu quản"
+      ]
+    },
+    {
+      "standard": "thoái hóa khớp",
+      "synonyms": [
+        "OA",
+        "osteoarthritis",
+        "thoáihóakhớp"
+      ]
+    },
+    {
+      "standard": "đau thắt lưng",
+      "synonyms": [
+        "low back pain",
+        "LBP",
+        "đau lưng"
+      ]
+    },
+    {
+      "standard": "suy thận mạn",
+      "synonyms": [
+        "CKD",
+        "chronic kidney disease",
+        "suythận"
+      ]
+    },
+    {
+      "standard": "ung thư phổi",
+      "synonyms": [
+        "lung cancer",
+        "UT phổi",
+        "carcinoma phổi"
+      ]
+    },
+    {
+      "standard": "viêm ruột thừa",
+      "synonyms": [
+        "appendicitis",
+        "VRPT",
+        "viêm ruột thừa cấp"
+      ]
+    },
+    {
+      "standard": "amlodipine",
+      "synonyms": [
+        "amlodipin",
+        "amlodipine besylate",
+        "norvasc"
+      ]
+    },
+    {
+      "standard": "metoprolol",
+      "synonyms": [
+        "metoprolol succinate",
+        "metoprolol tartrate",
+        "lopressor",
+        "toprol"
+      ]
+    },
+    {
+      "standard": "aspirin",
+      "synonyms": [
+        "acetylsalicylic acid",
+        "ASA",
+        "aspirin"
+      ]
+    },
+    {
+      "standard": "atorvastatin",
+      "synonyms": [
+        "atorvastatin calcium",
+        "lipitor"
+      ]
+    },
+    {
+      "standard": "omeprazole",
+      "synonyms": [
+        "omeprazol",
+        "omeprazole magnesium",
+        "prilosec"
+      ]
+    },
+    {
+      "standard": "metformin",
+      "synonyms": [
+        "metformin HCl",
+        "metformin hydrochloride",
+        "glucophage"
+      ]
+    },
+    {
+      "standard": "clopidogrel",
+      "synonyms": [
+        "clopidogrel bisulfate",
+        "plavix"
+      ]
+    },
+    {
+      "standard": "losartan",
+      "synonyms": [
+        "losartan potassium",
+        "cozaar"
+      ]
+    },
+    {
+      "standard": "amlodipine",
+      "synonyms": [
+        "amlodipine besylate",
+        "norvasc"
+      ]
+    },
+    {
+      "standard": "nhiệt độ",
+      "synonyms": [
+        "T",
+        "temperature",
+        "sốt"
+      ]
+    },
+    {
+      "standard": "nhịp tim",
+      "synonyms": [
+        "HR",
+        "heart rate",
+        "pulse",
+        "mạch"
+      ]
+    },
+    {
+      "standard": "huyết áp",
+      "synonyms": [
+        "BP",
+        "blood pressure",
+        "HA",
+        "huyếtap"
+      ]
+    },
+    {
+      "standard": "độ bão hòa oxy",
+      "synonyms": [
+        "SpO2",
+        "O2 sat",
+        "saturated oxygen"
+      ]
+    },
+    {
+      "standard": "nhịp thở",
+      "synonyms": [
+        "RR",
+        "respiratory rate"
+      ]
+    }
+  ],
+  "total_abbreviations": 316,
+  "total_synonym_groups": 32
+}

@@ -1,0 +1,1211 @@
+{
+  "version": "1.0",
+  "description": "RxNorm drug database for Vietnamese medical NER",
+  "total_drugs": 149,
+  "categories": [
+    "Kháng nấm",
+    "Tim mạch",
+    "Nội tiết",
+    "Dị ứng",
+    "Kháng sinh",
+    "Tiêu hóa",
+    "Giảm đau",
+    "Tâm thần",
+    "Da liễu",
+    "Hô hấp"
+  ],
+  "drugs": {
+    "308135": {
+      "rxcui": "308135",
+      "name_en": "Amlodipine 10 MG Oral Tablet",
+      "name_vi": "Amlodipine 10mg",
+      "category": "Tim mạch",
+      "generic": "amlodipine",
+      "search_text": "amlodipine 10 mg oral tablet amlodipine 10mg amlodipine"
+    },
+    "308056": {
+      "rxcui": "308056",
+      "name_en": "Amlodipine 5 MG Oral Tablet",
+      "name_vi": "Amlodipine 5mg",
+      "category": "Tim mạch",
+      "generic": "amlodipine",
+      "search_text": "amlodipine 5 mg oral tablet amlodipine 5mg amlodipine"
+    },
+    "243670": {
+      "rxcui": "243670",
+      "name_en": "Aspirin 81 MG Oral Tablet",
+      "name_vi": "Aspirin 81mg",
+      "category": "Tim mạch",
+      "generic": "aspirin",
+      "search_text": "aspirin 81 mg oral tablet aspirin 81mg aspirin"
+    },
+    "197361": {
+      "rxcui": "197361",
+      "name_en": "Aspirin 325 MG Oral Tablet",
+      "name_vi": "Aspirin 325mg / Amitriptyline 25mg / Fluoxetine 20mg",
+      "category": "Tim mạch",
+      "generic": "aspirin",
+      "search_text": "aspirin 325 mg oral tablet aspirin 325mg / amitriptyline 25mg / fluoxetine 20mg aspirin"
+    },
+    "866436": {
+      "rxcui": "866436",
+      "name_en": "Metoprolol Succinate 50 MG Extended Release Oral Tablet",
+      "name_vi": "Metoprolol succinate XL 50mg",
+      "category": "Tim mạch",
+      "generic": "metoprolol",
+      "search_text": "metoprolol succinate 50 mg extended release oral tablet metoprolol succinate xl 50mg metoprolol"
+    },
+    "866437": {
+      "rxcui": "866437",
+      "name_en": "Metoprolol Succinate 100 MG Extended Release Oral Tablet",
+      "name_vi": "Metoprolol succinate XL 100mg",
+      "category": "Tim mạch",
+      "generic": "metoprolol",
+      "search_text": "metoprolol succinate 100 mg extended release oral tablet metoprolol succinate xl 100mg metoprolol"
+    },
+    "866438": {
+      "rxcui": "866438",
+      "name_en": "Metoprolol Tartrate 50 MG Oral Tablet",
+      "name_vi": "Metoprolol tartrate 50mg",
+      "category": "Tim mạch",
+      "generic": "metoprolol",
+      "search_text": "metoprolol tartrate 50 mg oral tablet metoprolol tartrate 50mg metoprolol"
+    },
+    "197373": {
+      "rxcui": "197373",
+      "name_en": "Metoprolol Tartrate 25 MG Oral Tablet",
+      "name_vi": "Metoprolol tartrate 25mg",
+      "category": "Tim mạch",
+      "generic": "metoprolol",
+      "search_text": "metoprolol tartrate 25 mg oral tablet metoprolol tartrate 25mg metoprolol"
+    },
+    "904475": {
+      "rxcui": "904475",
+      "name_en": "Pravastatin Sodium 40 MG Oral Tablet",
+      "name_vi": "Pravastatin 40mg",
+      "category": "Tim mạch",
+      "generic": "pravastatin",
+      "search_text": "pravastatin sodium 40 mg oral tablet pravastatin 40mg pravastatin"
+    },
+    "904474": {
+      "rxcui": "904474",
+      "name_en": "Pravastatin Sodium 20 MG Oral Tablet",
+      "name_vi": "Pravastatin 20mg",
+      "category": "Tim mạch",
+      "generic": "pravastatin",
+      "search_text": "pravastatin sodium 20 mg oral tablet pravastatin 20mg pravastatin"
+    },
+    "259255": {
+      "rxcui": "259255",
+      "name_en": "Atorvastatin Calcium 20 MG Oral Tablet",
+      "name_vi": "Atorvastatin 20mg",
+      "category": "Tim mạch",
+      "generic": "atorvastatin",
+      "search_text": "atorvastatin calcium 20 mg oral tablet atorvastatin 20mg atorvastatin"
+    },
+    "259256": {
+      "rxcui": "259256",
+      "name_en": "Atorvastatin Calcium 40 MG Oral Tablet",
+      "name_vi": "Atorvastatin 40mg",
+      "category": "Tim mạch",
+      "generic": "atorvastatin",
+      "search_text": "atorvastatin calcium 40 mg oral tablet atorvastatin 40mg atorvastatin"
+    },
+    "365667": {
+      "rxcui": "365667",
+      "name_en": "Rosuvastatin Calcium 10 MG Oral Tablet",
+      "name_vi": "Rosuvastatin 10mg",
+      "category": "Tim mạch",
+      "generic": "rosuvastatin",
+      "search_text": "rosuvastatin calcium 10 mg oral tablet rosuvastatin 10mg rosuvastatin"
+    },
+    "365668": {
+      "rxcui": "365668",
+      "name_en": "Rosuvastatin Calcium 20 MG Oral Tablet",
+      "name_vi": "Rosuvastatin 20mg",
+      "category": "Tim mạch",
+      "generic": "rosuvastatin",
+      "search_text": "rosuvastatin calcium 20 mg oral tablet rosuvastatin 20mg rosuvastatin"
+    },
+    "197382": {
+      "rxcui": "197382",
+      "name_en": "Clopidogrel Bisulfate 75 MG Oral Tablet",
+      "name_vi": "Clopidogrel 75mg / Cetirizine 10mg",
+      "category": "Tim mạch",
+      "generic": "clopidogrel",
+      "search_text": "clopidogrel bisulfate 75 mg oral tablet clopidogrel 75mg / cetirizine 10mg clopidogrel"
+    },
+    "197381": {
+      "rxcui": "197381",
+      "name_en": "Clopidogrel Bisulfate 300 MG Oral Tablet",
+      "name_vi": "Clopidogrel 300mg",
+      "category": "Tim mạch",
+      "generic": "clopidogrel",
+      "search_text": "clopidogrel bisulfate 300 mg oral tablet clopidogrel 300mg clopidogrel"
+    },
+    "83367": {
+      "rxcui": "83367",
+      "name_en": "Warfarin Sodium 5 MG Oral Tablet",
+      "name_vi": "Warfarin 5mg / Amiodarone 200mg",
+      "category": "Tim mạch",
+      "generic": "warfarin",
+      "search_text": "warfarin sodium 5 mg oral tablet warfarin 5mg / amiodarone 200mg warfarin"
+    },
+    "83366": {
+      "rxcui": "83366",
+      "name_en": "Warfarin Sodium 2.5 MG Oral Tablet",
+      "name_vi": "Warfarin 2.5mg",
+      "category": "Tim mạch",
+      "generic": "warfarin",
+      "search_text": "warfarin sodium 2.5 mg oral tablet warfarin 2.5mg warfarin"
+    },
+    "197696": {
+      "rxcui": "197696",
+      "name_en": "Losartan Potassium 50 MG Oral Tablet",
+      "name_vi": "Losartan 50mg / Paracetamol 500mg",
+      "category": "Tim mạch",
+      "generic": "losartan",
+      "search_text": "losartan potassium 50 mg oral tablet losartan 50mg / paracetamol 500mg losartan"
+    },
+    "197697": {
+      "rxcui": "197697",
+      "name_en": "Losartan Potassium 100 MG Oral Tablet",
+      "name_vi": "Losartan 100mg",
+      "category": "Tim mạch",
+      "generic": "losartan",
+      "search_text": "losartan potassium 100 mg oral tablet losartan 100mg losartan"
+    },
+    "200033": {
+      "rxcui": "200033",
+      "name_en": "Valsartan 80 MG Oral Tablet",
+      "name_vi": "Valsartan 80mg / Escitalopram 10mg",
+      "category": "Tim mạch",
+      "generic": "valsartan",
+      "search_text": "valsartan 80 mg oral tablet valsartan 80mg / escitalopram 10mg valsartan"
+    },
+    "200034": {
+      "rxcui": "200034",
+      "name_en": "Valsartan 160 MG Oral Tablet",
+      "name_vi": "Valsartan 160mg / Escitalopram 20mg",
+      "category": "Tim mạch",
+      "generic": "valsartan",
+      "search_text": "valsartan 160 mg oral tablet valsartan 160mg / escitalopram 20mg valsartan"
+    },
+    "316095": {
+      "rxcui": "316095",
+      "name_en": "Perindopril Erbumine 4 MG Oral Tablet",
+      "name_vi": "Perindopril 4mg",
+      "category": "Tim mạch",
+      "generic": "perindopril",
+      "search_text": "perindopril erbumine 4 mg oral tablet perindopril 4mg perindopril"
+    },
+    "316096": {
+      "rxcui": "316096",
+      "name_en": "Perindopril Erbumine 8 MG Oral Tablet",
+      "name_vi": "Perindopril 8mg",
+      "category": "Tim mạch",
+      "generic": "perindopril",
+      "search_text": "perindopril erbumine 8 mg oral tablet perindopril 8mg perindopril"
+    },
+    "197894": {
+      "rxcui": "197894",
+      "name_en": "Spironolactone 25 MG Oral Tablet",
+      "name_vi": "Spironolactone 25mg / Levothyroxine 50mcg",
+      "category": "Tim mạch",
+      "generic": "spironolactone",
+      "search_text": "spironolactone 25 mg oral tablet spironolactone 25mg / levothyroxine 50mcg spironolactone"
+    },
+    "310429": {
+      "rxcui": "310429",
+      "name_en": "Apixaban 5 MG Oral Tablet",
+      "name_vi": "Apixaban 5mg",
+      "category": "Tim mạch",
+      "generic": "apixaban",
+      "search_text": "apixaban 5 mg oral tablet apixaban 5mg apixaban"
+    },
+    "1114195": {
+      "rxcui": "1114195",
+      "name_en": "Apixaban 2.5 MG Oral Tablet",
+      "name_vi": "Apixaban 2.5mg",
+      "category": "Tim mạch",
+      "generic": "apixaban",
+      "search_text": "apixaban 2.5 mg oral tablet apixaban 2.5mg apixaban"
+    },
+    "1364430": {
+      "rxcui": "1364430",
+      "name_en": "Rivaroxaban 20 MG Oral Tablet",
+      "name_vi": "Rivaroxaban 20mg",
+      "category": "Tim mạch",
+      "generic": "rivaroxaban",
+      "search_text": "rivaroxaban 20 mg oral tablet rivaroxaban 20mg rivaroxaban"
+    },
+    "1364431": {
+      "rxcui": "1364431",
+      "name_en": "Rivaroxaban 15 MG Oral Tablet",
+      "name_vi": "Rivaroxaban 15mg",
+      "category": "Tim mạch",
+      "generic": "rivaroxaban",
+      "search_text": "rivaroxaban 15 mg oral tablet rivaroxaban 15mg rivaroxaban"
+    },
+    "197416": {
+      "rxcui": "197416",
+      "name_en": "Enalapril Maleate 5 MG Oral Tablet",
+      "name_vi": "Enalapril 5mg",
+      "category": "Tim mạch",
+      "generic": "enalapril",
+      "search_text": "enalapril maleate 5 mg oral tablet enalapril 5mg enalapril"
+    },
+    "197417": {
+      "rxcui": "197417",
+      "name_en": "Enalapril Maleate 10 MG Oral Tablet",
+      "name_vi": "Enalapril 10mg",
+      "category": "Tim mạch",
+      "generic": "enalapril",
+      "search_text": "enalapril maleate 10 mg oral tablet enalapril 10mg enalapril"
+    },
+    "310380": {
+      "rxcui": "310380",
+      "name_en": "Ramipril 5 MG Oral Tablet",
+      "name_vi": "Ramipril 5mg",
+      "category": "Tim mạch",
+      "generic": "ramipril",
+      "search_text": "ramipril 5 mg oral tablet ramipril 5mg ramipril"
+    },
+    "310381": {
+      "rxcui": "310381",
+      "name_en": "Ramipril 10 MG Oral Tablet",
+      "name_vi": "Ramipril 10mg",
+      "category": "Tim mạch",
+      "generic": "ramipril",
+      "search_text": "ramipril 10 mg oral tablet ramipril 10mg ramipril"
+    },
+    "197840": {
+      "rxcui": "197840",
+      "name_en": "Diltiazem Hydrochloride 30 MG Oral Tablet",
+      "name_vi": "Diltiazem 30mg",
+      "category": "Tim mạch",
+      "generic": "diltiazem",
+      "search_text": "diltiazem hydrochloride 30 mg oral tablet diltiazem 30mg diltiazem"
+    },
+    "197841": {
+      "rxcui": "197841",
+      "name_en": "Diltiazem Hydrochloride 60 MG Oral Tablet",
+      "name_vi": "Diltiazem 60mg",
+      "category": "Tim mạch",
+      "generic": "diltiazem",
+      "search_text": "diltiazem hydrochloride 60 mg oral tablet diltiazem 60mg diltiazem"
+    },
+    "200257": {
+      "rxcui": "200257",
+      "name_en": "Isosorbide Mononitrate 30 MG Extended Release Oral Tablet",
+      "name_vi": "Isosorbide mononitrate 30mg",
+      "category": "Tim mạch",
+      "generic": "isosorbide",
+      "search_text": "isosorbide mononitrate 30 mg extended release oral tablet isosorbide mononitrate 30mg isosorbide"
+    },
+    "197493": {
+      "rxcui": "197493",
+      "name_en": "Nitroglycerin 0.5 MG Sublingual Tablet",
+      "name_vi": "Nitroglycerin 0.5mg",
+      "category": "Tim mạch",
+      "generic": "nitroglycerin",
+      "search_text": "nitroglycerin 0.5 mg sublingual tablet nitroglycerin 0.5mg nitroglycerin"
+    },
+    "310528": {
+      "rxcui": "310528",
+      "name_en": "Furosemide 40 MG Oral Tablet",
+      "name_vi": "Furosemide 40mg",
+      "category": "Tim mạch",
+      "generic": "furosemide",
+      "search_text": "furosemide 40 mg oral tablet furosemide 40mg furosemide"
+    },
+    "310527": {
+      "rxcui": "310527",
+      "name_en": "Furosemide 20 MG Oral Tablet",
+      "name_vi": "Furosemide 20mg",
+      "category": "Tim mạch",
+      "generic": "furosemide",
+      "search_text": "furosemide 20 mg oral tablet furosemide 20mg furosemide"
+    },
+    "197895": {
+      "rxcui": "197895",
+      "name_en": "Spironolactone 50 MG Oral Tablet",
+      "name_vi": "Spironolactone 50mg / Levothyroxine 100mcg",
+      "category": "Tim mạch",
+      "generic": "spironolactone",
+      "search_text": "spironolactone 50 mg oral tablet spironolactone 50mg / levothyroxine 100mcg spironolactone"
+    },
+    "310485": {
+      "rxcui": "310485",
+      "name_en": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "name_vi": "Hydrochlorothiazide 25mg",
+      "category": "Tim mạch",
+      "generic": "hydrochlorothiazide",
+      "search_text": "hydrochlorothiazide 25 mg oral tablet hydrochlorothiazide 25mg hydrochlorothiazide"
+    },
+    "310486": {
+      "rxcui": "310486",
+      "name_en": "Hydrochlorothiazide 50 MG Oral Tablet",
+      "name_vi": "Hydrochlorothiazide 50mg",
+      "category": "Tim mạch",
+      "generic": "hydrochlorothiazide",
+      "search_text": "hydrochlorothiazide 50 mg oral tablet hydrochlorothiazide 50mg hydrochlorothiazide"
+    },
+    "861006": {
+      "rxcui": "861006",
+      "name_en": "Metformin Hydrochloride 500 MG Oral Tablet",
+      "name_vi": "Metformin 500mg",
+      "category": "Nội tiết",
+      "generic": "metformin",
+      "search_text": "metformin hydrochloride 500 mg oral tablet metformin 500mg metformin"
+    },
+    "861007": {
+      "rxcui": "861007",
+      "name_en": "Metformin Hydrochloride 850 MG Oral Tablet",
+      "name_vi": "Metformin 850mg",
+      "category": "Nội tiết",
+      "generic": "metformin",
+      "search_text": "metformin hydrochloride 850 mg oral tablet metformin 850mg metformin"
+    },
+    "861004": {
+      "rxcui": "861004",
+      "name_en": "Metformin Hydrochloride 1000 MG Oral Tablet",
+      "name_vi": "Metformin 1000mg",
+      "category": "Nội tiết",
+      "generic": "metformin",
+      "search_text": "metformin hydrochloride 1000 mg oral tablet metformin 1000mg metformin"
+    },
+    "261551": {
+      "rxcui": "261551",
+      "name_en": "Glipizide 5 MG Oral Tablet",
+      "name_vi": "Glipizide 5mg",
+      "category": "Nội tiết",
+      "generic": "glipizide",
+      "search_text": "glipizide 5 mg oral tablet glipizide 5mg glipizide"
+    },
+    "261552": {
+      "rxcui": "261552",
+      "name_en": "Glipizide 10 MG Oral Tablet",
+      "name_vi": "Glipizide 10mg",
+      "category": "Nội tiết",
+      "generic": "glipizide",
+      "search_text": "glipizide 10 mg oral tablet glipizide 10mg glipizide"
+    },
+    "274783": {
+      "rxcui": "274783",
+      "name_en": "Gliclazide 80 MG Oral Tablet",
+      "name_vi": "Gliclazide 80mg",
+      "category": "Nội tiết",
+      "generic": "gliclazide",
+      "search_text": "gliclazide 80 mg oral tablet gliclazide 80mg gliclazide"
+    },
+    "261651": {
+      "rxcui": "261651",
+      "name_en": "Glyburide 5 MG Oral Tablet",
+      "name_vi": "Glyburide 5mg",
+      "category": "Nội tiết",
+      "generic": "glyburide",
+      "search_text": "glyburide 5 mg oral tablet glyburide 5mg glyburide"
+    },
+    "274784": {
+      "rxcui": "274784",
+      "name_en": "Gliclazide 30 MG Extended Release Oral Tablet",
+      "name_vi": "Gliclazide 30mg",
+      "category": "Nội tiết",
+      "generic": "gliclazide",
+      "search_text": "gliclazide 30 mg extended release oral tablet gliclazide 30mg gliclazide"
+    },
+    "860234": {
+      "rxcui": "860234",
+      "name_en": "Sitagliptin Phosphate 100 MG Oral Tablet",
+      "name_vi": "Sitagliptin 100mg",
+      "category": "Nội tiết",
+      "generic": "sitagliptin",
+      "search_text": "sitagliptin phosphate 100 mg oral tablet sitagliptin 100mg sitagliptin"
+    },
+    "1100801": {
+      "rxcui": "1100801",
+      "name_en": "Dapagliflozin 10 MG Oral Tablet",
+      "name_vi": "Dapagliflozin 10mg",
+      "category": "Nội tiết",
+      "generic": "dapagliflozin",
+      "search_text": "dapagliflozin 10 mg oral tablet dapagliflozin 10mg dapagliflozin"
+    },
+    "1545682": {
+      "rxcui": "1545682",
+      "name_en": "Empagliflozin 10 MG Oral Tablet",
+      "name_vi": "Empagliflozin 10mg",
+      "category": "Nội tiết",
+      "generic": "empagliflozin",
+      "search_text": "empagliflozin 10 mg oral tablet empagliflozin 10mg empagliflozin"
+    },
+    "1545683": {
+      "rxcui": "1545683",
+      "name_en": "Empagliflozin 25 MG Oral Tablet",
+      "name_vi": "Empagliflozin 25mg",
+      "category": "Nội tiết",
+      "generic": "empagliflozin",
+      "search_text": "empagliflozin 25 mg oral tablet empagliflozin 25mg empagliflozin"
+    },
+    "1369494": {
+      "rxcui": "1369494",
+      "name_en": "Liraglutide 6 MG/ML Injectable Solution",
+      "name_vi": "Liraglutide 6mg/ml",
+      "category": "Nội tiết",
+      "generic": "liraglutide",
+      "search_text": "liraglutide 6 mg/ml injectable solution liraglutide 6mg/ml liraglutide"
+    },
+    "2380733": {
+      "rxcui": "2380733",
+      "name_en": "Semaglutide 0.25 MG Injection",
+      "name_vi": "Semaglutide 0.25mg",
+      "category": "Nội tiết",
+      "generic": "semaglutide",
+      "search_text": "semaglutide 0.25 mg injection semaglutide 0.25mg semaglutide"
+    },
+    "2380735": {
+      "rxcui": "2380735",
+      "name_en": "Semaglutide 1 MG Injection",
+      "name_vi": "Semaglutide 1mg",
+      "category": "Nội tiết",
+      "generic": "semaglutide",
+      "search_text": "semaglutide 1 mg injection semaglutide 1mg semaglutide"
+    },
+    "1488552": {
+      "rxcui": "1488552",
+      "name_en": "Insulin Glargine 100 UNT/ML Injectable Solution",
+      "name_vi": "Insulin glargine 100U/ml",
+      "category": "Nội tiết",
+      "generic": "insulin glargine",
+      "search_text": "insulin glargine 100 unt/ml injectable solution insulin glargine 100u/ml insulin glargine"
+    },
+    "204854": {
+      "rxcui": "204854",
+      "name_en": "Insulin, Regular, Human 100 UNT/ML Injectable Solution",
+      "name_vi": "Insulin human regular 100U/ml / Sertraline 50mg",
+      "category": "Nội tiết",
+      "generic": "insulin",
+      "search_text": "insulin, regular, human 100 unt/ml injectable solution insulin human regular 100u/ml / sertraline 50mg insulin"
+    },
+    "197523": {
+      "rxcui": "197523",
+      "name_en": "Amoxicillin 500 MG Oral Capsule",
+      "name_vi": "Amoxicillin 500mg / Salbutamol inhaler",
+      "category": "Kháng sinh",
+      "generic": "amoxicillin",
+      "search_text": "amoxicillin 500 mg oral capsule amoxicillin 500mg / salbutamol inhaler amoxicillin"
+    },
+    "197524": {
+      "rxcui": "197524",
+      "name_en": "Amoxicillin 1000 MG Oral Tablet",
+      "name_vi": "Amoxicillin 1g / Salbutamol nebulizer",
+      "category": "Kháng sinh",
+      "generic": "amoxicillin",
+      "search_text": "amoxicillin 1000 mg oral tablet amoxicillin 1g / salbutamol nebulizer amoxicillin"
+    },
+    "197465": {
+      "rxcui": "197465",
+      "name_en": "Amoxicillin 500 MG / Clavulanate 125 MG Oral Tablet",
+      "name_vi": "Amoxicillin + Clavulanate 625mg",
+      "category": "Kháng sinh",
+      "generic": "amoxicillin/clavulanate",
+      "search_text": "amoxicillin 500 mg / clavulanate 125 mg oral tablet amoxicillin + clavulanate 625mg amoxicillin/clavulanate"
+    },
+    "197466": {
+      "rxcui": "197466",
+      "name_en": "Amoxicillin 875 MG / Clavulanate 125 MG Oral Tablet",
+      "name_vi": "Amoxicillin + Clavulanate 1g",
+      "category": "Kháng sinh",
+      "generic": "amoxicillin/clavulanate",
+      "search_text": "amoxicillin 875 mg / clavulanate 125 mg oral tablet amoxicillin + clavulanate 1g amoxicillin/clavulanate"
+    },
+    "197397": {
+      "rxcui": "197397",
+      "name_en": "Azithromycin 500 MG Oral Tablet",
+      "name_vi": "Azithromycin 500mg",
+      "category": "Kháng sinh",
+      "generic": "azithromycin",
+      "search_text": "azithromycin 500 mg oral tablet azithromycin 500mg azithromycin"
+    },
+    "197398": {
+      "rxcui": "197398",
+      "name_en": "Azithromycin 250 MG Oral Tablet",
+      "name_vi": "Azithromycin 250mg",
+      "category": "Kháng sinh",
+      "generic": "azithromycin",
+      "search_text": "azithromycin 250 mg oral tablet azithromycin 250mg azithromycin"
+    },
+    "197409": {
+      "rxcui": "197409",
+      "name_en": "Ciprofloxacin Hydrochloride 500 MG Oral Tablet",
+      "name_vi": "Ciprofloxacin 500mg",
+      "category": "Kháng sinh",
+      "generic": "ciprofloxacin",
+      "search_text": "ciprofloxacin hydrochloride 500 mg oral tablet ciprofloxacin 500mg ciprofloxacin"
+    },
+    "309954": {
+      "rxcui": "309954",
+      "name_en": "Levofloxacin 500 MG Oral Tablet",
+      "name_vi": "Levofloxacin 500mg",
+      "category": "Kháng sinh",
+      "generic": "levofloxacin",
+      "search_text": "levofloxacin 500 mg oral tablet levofloxacin 500mg levofloxacin"
+    },
+    "309953": {
+      "rxcui": "309953",
+      "name_en": "Levofloxacin 750 MG Oral Tablet",
+      "name_vi": "Levofloxacin 750mg",
+      "category": "Kháng sinh",
+      "generic": "levofloxacin",
+      "search_text": "levofloxacin 750 mg oral tablet levofloxacin 750mg levofloxacin"
+    },
+    "198145": {
+      "rxcui": "198145",
+      "name_en": "Doxycycline Hyclate 100 MG Oral Tablet",
+      "name_vi": "Doxycycline 100mg",
+      "category": "Kháng sinh",
+      "generic": "doxycycline",
+      "search_text": "doxycycline hyclate 100 mg oral tablet doxycycline 100mg doxycycline"
+    },
+    "197718": {
+      "rxcui": "197718",
+      "name_en": "Cefuroxime Axetil 500 MG Oral Tablet",
+      "name_vi": "Cefuroxime 500mg",
+      "category": "Kháng sinh",
+      "generic": "cefuroxime",
+      "search_text": "cefuroxime axetil 500 mg oral tablet cefuroxime 500mg cefuroxime"
+    },
+    "197717": {
+      "rxcui": "197717",
+      "name_en": "Cefuroxime Axetil 250 MG Oral Tablet",
+      "name_vi": "Cefuroxime 250mg",
+      "category": "Kháng sinh",
+      "generic": "cefuroxime",
+      "search_text": "cefuroxime axetil 250 mg oral tablet cefuroxime 250mg cefuroxime"
+    },
+    "200345": {
+      "rxcui": "200345",
+      "name_en": "Cefixime 200 MG Oral Capsule",
+      "name_vi": "Cefixime 200mg",
+      "category": "Kháng sinh",
+      "generic": "cefixime",
+      "search_text": "cefixime 200 mg oral capsule cefixime 200mg cefixime"
+    },
+    "200346": {
+      "rxcui": "200346",
+      "name_en": "Cefpodoxime Proxetil 200 MG Oral Tablet",
+      "name_vi": "Cefpodoxime 200mg",
+      "category": "Kháng sinh",
+      "generic": "cefpodoxime",
+      "search_text": "cefpodoxime proxetil 200 mg oral tablet cefpodoxime 200mg cefpodoxime"
+    },
+    "198397": {
+      "rxcui": "198397",
+      "name_en": "Clindamycin Hydrochloride 300 MG Oral Capsule",
+      "name_vi": "Clindamycin 300mg",
+      "category": "Kháng sinh",
+      "generic": "clindamycin",
+      "search_text": "clindamycin hydrochloride 300 mg oral capsule clindamycin 300mg clindamycin"
+    },
+    "198207": {
+      "rxcui": "198207",
+      "name_en": "Metronidazole 500 MG Oral Tablet",
+      "name_vi": "Metronidazole 500mg / Pantoprazole 40mg",
+      "category": "Kháng sinh",
+      "generic": "metronidazole",
+      "search_text": "metronidazole 500 mg oral tablet metronidazole 500mg / pantoprazole 40mg metronidazole"
+    },
+    "197415": {
+      "rxcui": "197415",
+      "name_en": "Erythromycin 500 MG Oral Tablet",
+      "name_vi": "Erythromycin 500mg",
+      "category": "Kháng sinh",
+      "generic": "erythromycin",
+      "search_text": "erythromycin 500 mg oral tablet erythromycin 500mg erythromycin"
+    },
+    "204993": {
+      "rxcui": "204993",
+      "name_en": "Vancomycin 500 MG Oral Capsule",
+      "name_vi": "Vancomycin 500mg",
+      "category": "Kháng sinh",
+      "generic": "vancomycin",
+      "search_text": "vancomycin 500 mg oral capsule vancomycin 500mg vancomycin"
+    },
+    "196038": {
+      "rxcui": "196038",
+      "name_en": "Metronidazole 250 MG Oral Tablet",
+      "name_vi": "Metronidazole 250mg",
+      "category": "Kháng sinh",
+      "generic": "metronidazole",
+      "search_text": "metronidazole 250 mg oral tablet metronidazole 250mg metronidazole"
+    },
+    "197648": {
+      "rxcui": "197648",
+      "name_en": "Fluconazole 150 MG Oral Tablet",
+      "name_vi": "Fluconazole 150mg",
+      "category": "Kháng sinh",
+      "generic": "fluconazole",
+      "search_text": "fluconazole 150 mg oral tablet fluconazole 150mg fluconazole"
+    },
+    "204853": {
+      "rxcui": "204853",
+      "name_en": "Acyclovir 400 MG Oral Tablet",
+      "name_vi": "Acyclovir 400mg",
+      "category": "Kháng sinh",
+      "generic": "acyclovir",
+      "search_text": "acyclovir 400 mg oral tablet acyclovir 400mg acyclovir"
+    },
+    "204855": {
+      "rxcui": "204855",
+      "name_en": "Acyclovir 800 MG Oral Tablet",
+      "name_vi": "Acyclovir 800mg / Sertraline 100mg",
+      "category": "Kháng sinh",
+      "generic": "acyclovir",
+      "search_text": "acyclovir 800 mg oral tablet acyclovir 800mg / sertraline 100mg acyclovir"
+    },
+    "200031": {
+      "rxcui": "200031",
+      "name_en": "Ibuprofen 400 MG Oral Tablet",
+      "name_vi": "Ibuprofen 400mg",
+      "category": "Giảm đau",
+      "generic": "ibuprofen",
+      "search_text": "ibuprofen 400 mg oral tablet ibuprofen 400mg ibuprofen"
+    },
+    "200032": {
+      "rxcui": "200032",
+      "name_en": "Ibuprofen 600 MG Oral Tablet",
+      "name_vi": "Ibuprofen 600mg",
+      "category": "Giảm đau",
+      "generic": "ibuprofen",
+      "search_text": "ibuprofen 600 mg oral tablet ibuprofen 600mg ibuprofen"
+    },
+    "197901": {
+      "rxcui": "197901",
+      "name_en": "Naproxen Sodium 250 MG Oral Tablet",
+      "name_vi": "Naproxen 250mg / Tramadol 50mg / Codeine 30mg / Morphine 15mg / Lorazepam 1mg / Clonazepam 2mg / Trazodone 50mg / Vitamin D3 1000IU / Vitamin D3 5000IU / Calcium + Vitamin D3 / Iron supplement / Multivitamin / Prednisolone 5mg / Prednisone 5mg / Dexamethasone 0.5mg / Dexamethasone 4mg / Methylprednisolone 4mg / Methylprednisolone 16mg / Timolol eye drops / Dorzolamide eye drops / Latanoprost eye drops / Tamsulosin 0.4mg / Finasteride 5mg / Amlodipine + Atorvastatin / Bisacodyl 5mg / Lactulose 15ml / Simethicone 125mg / Enoxaparin 40mg / Heparin 5000U / Pregabalin 75mg / Pregabalin 150mg / Gabapentin 300mg / Gabapentin 400mg / Levodopa/Carbidopa 250/25mg / Donepezil 5mg / Sumatriptan 50mg / Insulin aspart / Insulin lispro / Ticagrelor 90mg",
+      "category": "Giảm đau",
+      "generic": "naproxen",
+      "search_text": "naproxen sodium 250 mg oral tablet naproxen 250mg / tramadol 50mg / codeine 30mg / morphine 15mg / lorazepam 1mg / clonazepam 2mg / trazodone 50mg / vitamin d3 1000iu / vitamin d3 5000iu / calcium + vitamin d3 / iron supplement / multivitamin / prednisolone 5mg / prednisone 5mg / dexamethasone 0.5mg / dexamethasone 4mg / methylprednisolone 4mg / methylprednisolone 16mg / timolol eye drops / dorzolamide eye drops / latanoprost eye drops / tamsulosin 0.4mg / finasteride 5mg / amlodipine + atorvastatin / bisacodyl 5mg / lactulose 15ml / simethicone 125mg / enoxaparin 40mg / heparin 5000u / pregabalin 75mg / pregabalin 150mg / gabapentin 300mg / gabapentin 400mg / levodopa/carbidopa 250/25mg / donepezil 5mg / sumatriptan 50mg / insulin aspart / insulin lispro / ticagrelor 90mg naproxen"
+    },
+    "197902": {
+      "rxcui": "197902",
+      "name_en": "Naproxen 500 MG Oral Tablet",
+      "name_vi": "Naproxen 500mg / Tramadol 100mg / Lorazepam 2mg",
+      "category": "Giảm đau",
+      "generic": "naproxen",
+      "search_text": "naproxen 500 mg oral tablet naproxen 500mg / tramadol 100mg / lorazepam 2mg naproxen"
+    },
+    "200525": {
+      "rxcui": "200525",
+      "name_en": "Diclofenac Sodium 50 MG Oral Tablet",
+      "name_vi": "Diclofenac 50mg",
+      "category": "Giảm đau",
+      "generic": "diclofenac",
+      "search_text": "diclofenac sodium 50 mg oral tablet diclofenac 50mg diclofenac"
+    },
+    "194884": {
+      "rxcui": "194884",
+      "name_en": "Celecoxib 200 MG Oral Capsule",
+      "name_vi": "Celecoxib 200mg",
+      "category": "Giảm đau",
+      "generic": "celecoxib",
+      "search_text": "celecoxib 200 mg oral capsule celecoxib 200mg celecoxib"
+    },
+    "198425": {
+      "rxcui": "198425",
+      "name_en": "Acetaminophen 325 MG Oral Tablet",
+      "name_vi": "Paracetamol 325mg",
+      "category": "Giảm đau",
+      "generic": "acetaminophen",
+      "search_text": "acetaminophen 325 mg oral tablet paracetamol 325mg acetaminophen"
+    },
+    "836622": {
+      "rxcui": "836622",
+      "name_en": "Acetaminophen 650 MG Oral Tablet",
+      "name_vi": "Paracetamol 650mg",
+      "category": "Giảm đau",
+      "generic": "acetaminophen",
+      "search_text": "acetaminophen 650 mg oral tablet paracetamol 650mg acetaminophen"
+    },
+    "1049221": {
+      "rxcui": "1049221",
+      "name_en": "Acetaminophen 325 MG / Tramadol Hydrochloride 37.5 MG Oral Tablet",
+      "name_vi": "Tramadol + Paracetamol",
+      "category": "Giảm đau",
+      "generic": "tramadol/acetaminophen",
+      "search_text": "acetaminophen 325 mg / tramadol hydrochloride 37.5 mg oral tablet tramadol + paracetamol tramadol/acetaminophen"
+    },
+    "198205": {
+      "rxcui": "198205",
+      "name_en": "Omeprazole 20 MG Delayed Release Oral Capsule",
+      "name_vi": "Omeprazole 20mg",
+      "category": "Tiêu hóa",
+      "generic": "omeprazole",
+      "search_text": "omeprazole 20 mg delayed release oral capsule omeprazole 20mg omeprazole"
+    },
+    "198206": {
+      "rxcui": "198206",
+      "name_en": "Omeprazole 40 MG Delayed Release Oral Capsule",
+      "name_vi": "Omeprazole 40mg",
+      "category": "Tiêu hóa",
+      "generic": "omeprazole",
+      "search_text": "omeprazole 40 mg delayed release oral capsule omeprazole 40mg omeprazole"
+    },
+    "198208": {
+      "rxcui": "198208",
+      "name_en": "Pantoprazole Sodium 20 MG Delayed Release Oral Tablet",
+      "name_vi": "Pantoprazole 20mg",
+      "category": "Tiêu hóa",
+      "generic": "pantoprazole",
+      "search_text": "pantoprazole sodium 20 mg delayed release oral tablet pantoprazole 20mg pantoprazole"
+    },
+    "198209": {
+      "rxcui": "198209",
+      "name_en": "Esomeprazole Magnesium 40 MG Delayed Release Oral Capsule",
+      "name_vi": "Esomeprazole 40mg",
+      "category": "Tiêu hóa",
+      "generic": "esomeprazole",
+      "search_text": "esomeprazole magnesium 40 mg delayed release oral capsule esomeprazole 40mg esomeprazole"
+    },
+    "198210": {
+      "rxcui": "198210",
+      "name_en": "Lansoprazole 30 MG Delayed Release Oral Capsule",
+      "name_vi": "Lansoprazole 30mg",
+      "category": "Tiêu hóa",
+      "generic": "lansoprazole",
+      "search_text": "lansoprazole 30 mg delayed release oral capsule lansoprazole 30mg lansoprazole"
+    },
+    "197432": {
+      "rxcui": "197432",
+      "name_en": "Ranitidine 150 MG Oral Tablet",
+      "name_vi": "Ranitidine 150mg",
+      "category": "Tiêu hóa",
+      "generic": "ranitidine",
+      "search_text": "ranitidine 150 mg oral tablet ranitidine 150mg ranitidine"
+    },
+    "197433": {
+      "rxcui": "197433",
+      "name_en": "Famotidine 20 MG Oral Tablet",
+      "name_vi": "Famotidine 20mg",
+      "category": "Tiêu hóa",
+      "generic": "famotidine",
+      "search_text": "famotidine 20 mg oral tablet famotidine 20mg famotidine"
+    },
+    "198545": {
+      "rxcui": "198545",
+      "name_en": "Domperidone 10 MG Oral Tablet",
+      "name_vi": "Domperidone 10mg / Hydrocortisone cream 1%",
+      "category": "Tiêu hóa",
+      "generic": "domperidone",
+      "search_text": "domperidone 10 mg oral tablet domperidone 10mg / hydrocortisone cream 1% domperidone"
+    },
+    "198546": {
+      "rxcui": "198546",
+      "name_en": "Metoclopramide Hydrochloride 10 MG Oral Tablet",
+      "name_vi": "Metoclopramide 10mg / Betamethasone cream",
+      "category": "Tiêu hóa",
+      "generic": "metoclopramide",
+      "search_text": "metoclopramide hydrochloride 10 mg oral tablet metoclopramide 10mg / betamethasone cream metoclopramide"
+    },
+    "1091494": {
+      "rxcui": "1091494",
+      "name_en": "Ondansetron Hydrochloride 4 MG Oral Tablet",
+      "name_vi": "Ondansetron 4mg",
+      "category": "Tiêu hóa",
+      "generic": "ondansetron",
+      "search_text": "ondansetron hydrochloride 4 mg oral tablet ondansetron 4mg ondansetron"
+    },
+    "1091495": {
+      "rxcui": "1091495",
+      "name_en": "Ondansetron Hydrochloride 8 MG Oral Tablet",
+      "name_vi": "Ondansetron 8mg",
+      "category": "Tiêu hóa",
+      "generic": "ondansetron",
+      "search_text": "ondansetron hydrochloride 8 mg oral tablet ondansetron 8mg ondansetron"
+    },
+    "197857": {
+      "rxcui": "197857",
+      "name_en": "Loperamide Hydrochloride 2 MG Oral Capsule",
+      "name_vi": "Loperamide 2mg",
+      "category": "Tiêu hóa",
+      "generic": "loperamide",
+      "search_text": "loperamide hydrochloride 2 mg oral capsule loperamide 2mg loperamide"
+    },
+    "1099279": {
+      "rxcui": "1099279",
+      "name_en": "Docusate Sodium 100 MG Oral Capsule",
+      "name_vi": "Docusate sodium 100mg",
+      "category": "Tiêu hóa",
+      "generic": "docusate",
+      "search_text": "docusate sodium 100 mg oral capsule docusate sodium 100mg docusate"
+    },
+    "312935": {
+      "rxcui": "312935",
+      "name_en": "Senna 8.6 MG Oral Tablet",
+      "name_vi": "Senna 8.6mg",
+      "category": "Tiêu hóa",
+      "generic": "senna",
+      "search_text": "senna 8.6 mg oral tablet senna 8.6mg senna"
+    },
+    "392085": {
+      "rxcui": "392085",
+      "name_en": "Guaifenesin 100 MG Oral Tablet",
+      "name_vi": "Guaifenesin",
+      "category": "Hô hấp",
+      "generic": "guaifenesin",
+      "search_text": "guaifenesin 100 mg oral tablet guaifenesin guaifenesin"
+    },
+    "197383": {
+      "rxcui": "197383",
+      "name_en": "Loratadine 10 MG Oral Tablet",
+      "name_vi": "Loratadine 10mg",
+      "category": "Dị ứng",
+      "generic": "loratadine",
+      "search_text": "loratadine 10 mg oral tablet loratadine 10mg loratadine"
+    },
+    "197384": {
+      "rxcui": "197384",
+      "name_en": "Chlorpheniramine Maleate 4 MG Oral Tablet",
+      "name_vi": "Chlorpheniramine 4mg",
+      "category": "Dị ứng",
+      "generic": "chlorpheniramine",
+      "search_text": "chlorpheniramine maleate 4 mg oral tablet chlorpheniramine 4mg chlorpheniramine"
+    },
+    "197385": {
+      "rxcui": "197385",
+      "name_en": "Fexofenadine Hydrochloride 180 MG Oral Tablet",
+      "name_vi": "Fexofenadine 180mg",
+      "category": "Dị ứng",
+      "generic": "fexofenadine",
+      "search_text": "fexofenadine hydrochloride 180 mg oral tablet fexofenadine 180mg fexofenadine"
+    },
+    "197525": {
+      "rxcui": "197525",
+      "name_en": "Budesonide 200 MCG/ACTUATION Dry Powder Inhaler",
+      "name_vi": "Budesonide inhaler 200mcg",
+      "category": "Hô hấp",
+      "generic": "budesonide",
+      "search_text": "budesonide 200 mcg/actuation dry powder inhaler budesonide inhaler 200mcg budesonide"
+    },
+    "197526": {
+      "rxcui": "197526",
+      "name_en": "Budesonide 400 MCG/ACTUATION Dry Powder Inhaler",
+      "name_vi": "Budesonide inhaler 400mcg",
+      "category": "Hô hấp",
+      "generic": "budesonide",
+      "search_text": "budesonide 400 mcg/actuation dry powder inhaler budesonide inhaler 400mcg budesonide"
+    },
+    "197527": {
+      "rxcui": "197527",
+      "name_en": "Montelukast Sodium 10 MG Oral Tablet",
+      "name_vi": "Montelukast 10mg",
+      "category": "Hô hấp",
+      "generic": "montelukast",
+      "search_text": "montelukast sodium 10 mg oral tablet montelukast 10mg montelukast"
+    },
+    "197528": {
+      "rxcui": "197528",
+      "name_en": "Desloratadine 5 MG Oral Tablet",
+      "name_vi": "Desloratadine 5mg",
+      "category": "Dị ứng",
+      "generic": "desloratadine",
+      "search_text": "desloratadine 5 mg oral tablet desloratadine 5mg desloratadine"
+    },
+    "309845": {
+      "rxcui": "309845",
+      "name_en": "Diazepam 5 MG Oral Tablet",
+      "name_vi": "Diazepam 5mg",
+      "category": "Tâm thần",
+      "generic": "diazepam",
+      "search_text": "diazepam 5 mg oral tablet diazepam 5mg diazepam"
+    },
+    "309846": {
+      "rxcui": "309846",
+      "name_en": "Diazepam 10 MG Oral Tablet",
+      "name_vi": "Diazepam 10mg",
+      "category": "Tâm thần",
+      "generic": "diazepam",
+      "search_text": "diazepam 10 mg oral tablet diazepam 10mg diazepam"
+    },
+    "311309": {
+      "rxcui": "311309",
+      "name_en": "Alprazolam 0.5 MG Oral Tablet",
+      "name_vi": "Alprazolam 0.5mg / Zolpidem 10mg",
+      "category": "Tâm thần",
+      "generic": "alprazolam",
+      "search_text": "alprazolam 0.5 mg oral tablet alprazolam 0.5mg / zolpidem 10mg alprazolam"
+    },
+    "311310": {
+      "rxcui": "311310",
+      "name_en": "Alprazolam 1 MG Oral Tablet",
+      "name_vi": "Alprazolam 1mg",
+      "category": "Tâm thần",
+      "generic": "alprazolam",
+      "search_text": "alprazolam 1 mg oral tablet alprazolam 1mg alprazolam"
+    },
+    "313223": {
+      "rxcui": "313223",
+      "name_en": "Clonazepam 0.5 MG Oral Tablet",
+      "name_vi": "Clonazepam 0.5mg",
+      "category": "Tâm thần",
+      "generic": "clonazepam",
+      "search_text": "clonazepam 0.5 mg oral tablet clonazepam 0.5mg clonazepam"
+    },
+    "313224": {
+      "rxcui": "313224",
+      "name_en": "Clonazepam 1 MG Oral Tablet",
+      "name_vi": "Clonazepam 1mg",
+      "category": "Tâm thần",
+      "generic": "clonazepam",
+      "search_text": "clonazepam 1 mg oral tablet clonazepam 1mg clonazepam"
+    },
+    "197362": {
+      "rxcui": "197362",
+      "name_en": "Amitriptyline Hydrochloride 50 MG Oral Tablet",
+      "name_vi": "Amitriptyline 50mg",
+      "category": "Tâm thần",
+      "generic": "amitriptyline",
+      "search_text": "amitriptyline hydrochloride 50 mg oral tablet amitriptyline 50mg amitriptyline"
+    },
+    "197896": {
+      "rxcui": "197896",
+      "name_en": "Methimazole 5 MG Oral Tablet",
+      "name_vi": "Methimazole 5mg",
+      "category": "Nội tiết",
+      "generic": "methimazole",
+      "search_text": "methimazole 5 mg oral tablet methimazole 5mg methimazole"
+    },
+    "198547": {
+      "rxcui": "198547",
+      "name_en": "Mupirocin 20 MG/GM Topical Cream",
+      "name_vi": "Mupirocin cream 2%",
+      "category": "Da liễu",
+      "generic": "mupirocin",
+      "search_text": "mupirocin 20 mg/gm topical cream mupirocin cream 2% mupirocin"
+    },
+    "198548": {
+      "rxcui": "198548",
+      "name_en": "Nystatin 100000 UNT/GM Topical Cream",
+      "name_vi": "Nystatin cream",
+      "category": "Da liễu",
+      "generic": "nystatin",
+      "search_text": "nystatin 100000 unt/gm topical cream nystatin cream nystatin"
+    },
+    "7597": {
+      "rxcui": "7597",
+      "name_en": "Nystatin 100000 UNT/ML Oral Suspension",
+      "name_vi": "Nystatin oral suspension",
+      "category": "Da liễu",
+      "generic": "nystatin",
+      "search_text": "nystatin 100000 unt/ml oral suspension nystatin oral suspension nystatin"
+    },
+    "198549": {
+      "rxcui": "198549",
+      "name_en": "Clotrimazole 10 MG/GM Topical Cream",
+      "name_vi": "Clotrimazole cream 1%",
+      "category": "Da liễu",
+      "generic": "clotrimazole",
+      "search_text": "clotrimazole 10 mg/gm topical cream clotrimazole cream 1% clotrimazole"
+    },
+    "309311": {
+      "rxcui": "309311",
+      "name_en": "Fluconazole 150 MG Oral Capsule",
+      "name_vi": "Fluconazole 150mg",
+      "category": "Kháng nấm",
+      "generic": "fluconazole",
+      "search_text": "fluconazole 150 mg oral capsule fluconazole 150mg fluconazole"
+    },
+    "309312": {
+      "rxcui": "309312",
+      "name_en": "Itraconazole 100 MG Oral Capsule",
+      "name_vi": "Itraconazole 100mg",
+      "category": "Kháng nấm",
+      "generic": "itraconazole",
+      "search_text": "itraconazole 100 mg oral capsule itraconazole 100mg itraconazole"
+    },
+    "161": {
+      "rxcui": "161",
+      "name_en": "Acetaminophen 500 MG Oral Tablet",
+      "name_vi": "Acetaminophen 500mg",
+      "category": "Giảm đau",
+      "generic": "acetaminophen",
+      "search_text": "acetaminophen 500 mg oral tablet acetaminophen 500mg acetaminophen"
+    },
+    "1191": {
+      "rxcui": "1191",
+      "name_en": "Aspirin 325 MG Oral Tablet",
+      "name_vi": "Aspirin 325mg",
+      "category": "Tim mạch",
+      "generic": "aspirin",
+      "search_text": "aspirin 325 mg oral tablet aspirin 325mg aspirin"
+    },
+    "197388": {
+      "rxcui": "197388",
+      "name_en": "Metoprolol Tartrate 5 MG Oral Tablet",
+      "name_vi": "Metoprolol 5mg",
+      "category": "Tim mạch",
+      "generic": "metoprolol",
+      "search_text": "metoprolol tartrate 5 mg oral tablet metoprolol 5mg metoprolol"
+    },
+    "310494": {
+      "rxcui": "310494",
+      "name_en": "Lisinopril 2.5 MG Oral Tablet",
+      "name_vi": "Lisinopril 2.5mg",
+      "category": "Tim mạch",
+      "generic": "lisinopril",
+      "search_text": "lisinopril 2.5 mg oral tablet lisinopril 2.5mg lisinopril"
+    },
+    "316049": {
+      "rxcui": "316049",
+      "name_en": "Prednisone 40 MG Oral Tablet",
+      "name_vi": "Prednisone 40mg",
+      "category": "Kháng viêm",
+      "generic": "prednisone",
+      "search_text": "prednisone 40 mg oral tablet prednisone 40mg prednisone"
+    },
+    "860975": {
+      "rxcui": "860975",
+      "name_en": "Methylprednisolone 125 MG Injection",
+      "name_vi": "Methylprednisolone 125mg",
+      "category": "Kháng viêm",
+      "generic": "methylprednisolone",
+      "search_text": "methylprednisolone 125 mg injection methylprednisolone 125mg methylprednisolone"
+    },
+    "11124": {
+      "rxcui": "11124",
+      "name_en": "Vancomycin 1000 MG Injection",
+      "name_vi": "Vancomycin 1g",
+      "category": "Kháng sinh",
+      "generic": "vancomycin",
+      "search_text": "vancomycin 1000 mg injection vancomycin 1g vancomycin"
+    },
+    "309092": {
+      "rxcui": "309092",
+      "name_en": "Ceftriaxone 250 MG Injection",
+      "name_vi": "Ceftriaxone 250mg",
+      "category": "Kháng sinh",
+      "generic": "ceftriaxone",
+      "search_text": "ceftriaxone 250 mg injection ceftriaxone 250mg ceftriaxone"
+    },
+    "200237": {
+      "rxcui": "200237",
+      "name_en": "Bumetanide 2 MG Oral Tablet",
+      "name_vi": "Bumetanide 2mg",
+      "category": "Tim mạch",
+      "generic": "bumetanide",
+      "search_text": "bumetanide 2 mg oral tablet bumetanide 2mg bumetanide"
+    },
+    "3322": {
+      "rxcui": "3322",
+      "name_en": "Diazepam 5 MG Oral Tablet",
+      "name_vi": "Diazepam 5mg",
+      "category": "Tâm thần",
+      "generic": "diazepam",
+      "search_text": "diazepam 5 mg oral tablet diazepam 5mg diazepam"
+    },
+    "89711": {
+      "rxcui": "89711",
+      "name_en": "Hydromorphone 2 MG Oral Tablet",
+      "name_vi": "Hydromorphone 2mg",
+      "category": "Giảm đau",
+      "generic": "hydromorphone",
+      "search_text": "hydromorphone 2 mg oral tablet hydromorphone 2mg hydromorphone"
+    },
+    "101833": {
+      "rxcui": "101833",
+      "name_en": "Ranolazine 500 MG Oral Tablet",
+      "name_vi": "Ranolazine 500mg",
+      "category": "Tim mạch",
+      "generic": "ranolazine",
+      "search_text": "ranolazine 500 mg oral tablet ranolazine 500mg ranolazine"
+    },
+    "311985": {
+      "rxcui": "311985",
+      "name_en": "Nitroglycerin 0.4 MG Sublingual Tablet",
+      "name_vi": "Nitroglycerin 0.4mg",
+      "category": "Tim mạch",
+      "generic": "nitroglycerin",
+      "search_text": "nitroglycerin 0.4 mg sublingual tablet nitroglycerin 0.4mg nitroglycerin"
+    },
+    "211985": {
+      "rxcui": "211985",
+      "name_en": "Guaifenesin 400 MG Oral Tablet",
+      "name_vi": "Guaifenesin 400mg",
+      "category": "Hô hấp",
+      "generic": "guaifenesin",
+      "search_text": "guaifenesin 400 mg oral tablet guaifenesin 400mg guaifenesin"
+    },
+    "1361462": {
+      "rxcui": "1361462",
+      "name_en": "Tacrolimus 1 MG Oral Capsule",
+      "name_vi": "Tacrolimus 1mg",
+      "category": "Ức chế miễn dịch",
+      "generic": "tacrolimus",
+      "search_text": "tacrolimus 1 mg oral capsule tacrolimus 1mg tacrolimus"
+    },
+    "1361463": {
+      "rxcui": "1361463",
+      "name_en": "Tacrolimus 5 MG Oral Capsule",
+      "name_vi": "Tacrolimus 5mg",
+      "category": "Ức chế miễn dịch",
+      "generic": "tacrolimus",
+      "search_text": "tacrolimus 5 mg oral capsule tacrolimus 5mg tacrolimus"
+    },
+    "103726": {
+      "rxcui": "103726",
+      "name_en": "Ondansetron 4 MG Oral Tablet",
+      "name_vi": "Ondansetron 4mg",
+      "category": "Tiêu hóa",
+      "generic": "ondansetron",
+      "search_text": "ondansetron 4 mg oral tablet ondansetron 4mg ondansetron"
+    },
+    "310454": {
+      "rxcui": "310454",
+      "name_en": "Losartan 50 MG Oral Tablet",
+      "name_vi": "Losartan 50mg",
+      "category": "Tim mạch",
+      "generic": "losartan",
+      "search_text": "losartan 50 mg oral tablet losartan 50mg losartan"
+    },
+    "316517": {
+      "rxcui": "316517",
+      "name_en": "Losartan 100 MG Oral Tablet",
+      "name_vi": "Losartan 100mg",
+      "category": "Tim mạch",
+      "generic": "losartan",
+      "search_text": "losartan 100 mg oral tablet losartan 100mg losartan"
+    },
+    "316109": {
+      "rxcui": "316109",
+      "name_en": "Amlodipine 10 MG / Benazepril 20 MG Oral Capsule",
+      "name_vi": "Amlodipine 10mg + Benazepril 20mg",
+      "category": "Tim mạch",
+      "generic": "amlodipine/benazepril",
+      "search_text": "amlodipine 10 mg / benazepril 20 mg oral capsule amlodipine 10mg + benazepril 20mg amlodipine/benazepril"
+    },
+    "308136": {
+      "rxcui": "308136",
+      "name_en": "Amlodipine 2.5 MG Oral Tablet",
+      "name_vi": "Amlodipine 2.5mg",
+      "category": "Tim mạch",
+      "generic": "amlodipine",
+      "search_text": "amlodipine 2.5 mg oral tablet amlodipine 2.5mg amlodipine"
+    },
+    "261973": {
+      "rxcui": "261973",
+      "name_en": "Warfarin 5 MG Oral Tablet",
+      "name_vi": "Warfarin 5mg",
+      "category": "Tim mạch",
+      "generic": "warfarin",
+      "search_text": "warfarin 5 mg oral tablet warfarin 5mg warfarin"
+    },
+    "855333": {
+      "rxcui": "855333",
+      "name_en": "Warfarin 2.5 MG Oral Tablet",
+      "name_vi": "Warfarin 2.5mg",
+      "category": "Tim mạch",
+      "generic": "warfarin",
+      "search_text": "warfarin 2.5 mg oral tablet warfarin 2.5mg warfarin"
+    }
+  }
+}
