@@ -4,33 +4,30 @@ Orchestrates all modules: Normalization -> NER -> Alignment -> Linking -> Assert
 """
 import json
 import os
-import sys
 import time
+from pathlib import Path
 from typing import List, Dict, Optional
 
-# Add src to path
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(PROJECT_ROOT, "src"))
-
-from normalization import normalize_clinical_text, create_normalization_mapping, remap_positions
-from ner import NEREnsemble, NERLLMEngine, NERTransformerEngine
-from ner.position_align import align_all_positions
-from entity_linking import EntityLinker
-from assertion import AssertionDetector
-from postprocessing import postprocess, remove_overlapping_entities, fix_entity_type
+from src.normalization import normalize_clinical_text, create_normalization_mapping
+from src.ner import NEREnsemble, NERLLMEngine, NERTransformerEngine
+from src.ner.position_align import align_all_positions
+from src.entity_linking import EntityLinker
+from src.assertion import AssertionDetector
+from src.postprocessing import postprocess
 
 
 class MedicalNLPPipeline:
     """Complete Medical NLP pipeline."""
 
-    def __init__(self, config: Dict = None):
+    def __init__(self, config: Optional[Dict] = None):
         self.config = config or self._default_config()
-        self.ner_ensemble = None
-        self.entity_linker = None
-        self.assertion_detector = None
+        self.ner_ensemble: Optional[NEREnsemble] = None
+        self.entity_linker: Optional[EntityLinker] = None
+        self.assertion_detector: Optional[AssertionDetector] = None
         self._loaded = False
 
     def _default_config(self) -> Dict:
+        """Return default pipeline configuration."""
         return {
             "ner": {
                 "llm_models": ["qwen2.5:7b", "gemma3:4b"],
@@ -52,15 +49,16 @@ class MedicalNLPPipeline:
             },
         }
 
-    def load(self):
+    def load(self) -> None:
         """Load all pipeline components."""
-        print("="*60)
+        print("=" * 60)
         print("LOADING MEDICAL NLP PIPELINE")
-        print("="*60)
+        print("=" * 60)
 
-        # NER Ensemble
+        # Load NER Ensemble
         print("\n--- Loading NER ---")
         self.ner_ensemble = NEREnsemble()
+        
         for model in self.config["ner"].get("llm_models", []):
             engine = NERLLMEngine(
                 model=model,
@@ -74,15 +72,19 @@ class MedicalNLPPipeline:
             engine.load()
             self.ner_ensemble.add_engine(engine)
 
-        # Entity Linking
+        # Load Entity Linking
         print("\n--- Loading Entity Linking ---")
         self.entity_linker = EntityLinker(
-            embedding_model=self.config["entity_linking"].get("embedding_model", "BAAI/bge-m3"),
-            cross_encoder_model=self.config["entity_linking"].get("cross_encoder_model", "BAAI/bge-reranker-v2-m3"),
+            embedding_model=self.config["entity_linking"].get(
+                "embedding_model", "BAAI/bge-m3"
+            ),
+            cross_encoder_model=self.config["entity_linking"].get(
+                "cross_encoder_model", "BAAI/bge-reranker-v2-m3"
+            ),
         )
         self.entity_linker.load()
 
-        # Assertion Detection
+        # Load Assertion Detection
         print("\n--- Loading Assertion Detection ---")
         self.assertion_detector = AssertionDetector(
             use_classifier=self.config["assertion"].get("use_classifier", False),
@@ -95,17 +97,22 @@ class MedicalNLPPipeline:
     def process(self, text: str) -> List[Dict]:
         """
         Process a single clinical text through the full pipeline.
-        Returns list of entities in competition JSON format.
+        
+        Args:
+            text: Input clinical text
+            
+        Returns:
+            List of entities in competition JSON format
         """
         if not self._loaded:
             raise RuntimeError("Pipeline not loaded. Call load() first.")
 
         start_time = time.time()
 
-        # Step 1: Normalize
+        # Step 1: Normalize text
         if self.config["normalization"].get("enabled", True):
             normalized_text = normalize_clinical_text(text)
-            orig_to_norm, norm_to_orig = create_normalization_mapping(text, normalized_text)
+            _, norm_to_orig = create_normalization_mapping(text, normalized_text)
         else:
             normalized_text = text
             norm_to_orig = {i: i for i in range(len(text))}
@@ -117,10 +124,7 @@ class MedicalNLPPipeline:
         )
 
         # Step 3: Position Alignment (map back to original text)
-        if self.config["normalization"].get("enabled", True):
-            entities = align_all_positions(text, entities)
-        else:
-            entities = align_all_positions(text, entities)
+        entities = align_all_positions(text, entities)
 
         # Step 4: Assertion Detection
         entities = self.assertion_detector.detect_all(
@@ -131,9 +135,7 @@ class MedicalNLPPipeline:
 
         # Step 5: Entity Linking
         top_k = self.config["entity_linking"].get("top_k", 5)
-        entities = self.entity_linker.link_entities(
-            entities, text, top_k=top_k,
-        )
+        entities = self.entity_linker.link_entities(entities, text, top_k=top_k)
 
         # Step 6: Post-processing
         output = postprocess(text, entities)
@@ -143,11 +145,20 @@ class MedicalNLPPipeline:
 
         return output
 
-    def process_batch(self, texts: List[Dict], output_dir: str = None) -> List[Dict]:
+    def process_batch(
+        self, 
+        texts: List[Dict], 
+        output_dir: Optional[str] = None
+    ) -> List[Dict]:
         """
         Process a batch of texts.
-        Input: list of {"id": "1", "text": "..."}
-        Output: list of {"id": "1", "entities": [...]}
+        
+        Args:
+            texts: List of {"id": "1", "text": "..."}
+            output_dir: Optional directory to save individual JSON outputs
+            
+        Returns:
+            List of {"id": "1", "entities": [...]}
         """
         results = []
         total = len(texts)
@@ -168,8 +179,8 @@ class MedicalNLPPipeline:
 
             # Save individual output
             if output_dir:
-                os.makedirs(output_dir, exist_ok=True)
-                output_path = os.path.join(output_dir, f"{text_id}.json")
+                output_path = Path(output_dir) / f"{text_id}.json"
+                output_path.parent.mkdir(parents=True, exist_ok=True)
                 with open(output_path, "w", encoding="utf-8") as f:
                     json.dump(entities, f, ensure_ascii=False, indent=2)
 
@@ -179,8 +190,8 @@ class MedicalNLPPipeline:
 def run_inference(
     input_dir: str,
     output_dir: str,
-    config_path: str = None,
-):
+    config_path: Optional[str] = None,
+) -> List[Dict]:
     """Run inference on all .txt files in input_dir."""
     # Load config
     config = None
@@ -193,14 +204,13 @@ def run_inference(
     pipeline.load()
 
     # Read input files
+    input_path = Path(input_dir)
     texts = []
-    for filename in sorted(os.listdir(input_dir)):
-        if filename.endswith(".txt"):
-            filepath = os.path.join(input_dir, filename)
-            with open(filepath, "r", encoding="utf-8") as f:
-                text = f.read().strip()
-            text_id = filename.replace(".txt", "")
-            texts.append({"id": text_id, "text": text})
+    for filepath in sorted(input_path.glob("*.txt")):
+        with open(filepath, "r", encoding="utf-8") as f:
+            text = f.read().strip()
+        text_id = filepath.stem
+        texts.append({"id": text_id, "text": text})
 
     print(f"\nFound {len(texts)} input files")
 
