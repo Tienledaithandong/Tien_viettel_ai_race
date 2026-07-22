@@ -4,55 +4,68 @@ Orchestrates all modules for competition inference.
 """
 import json
 import os
-import sys
-import io
 import time
+from pathlib import Path
 from typing import List, Dict, Optional
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(PROJECT_ROOT, "src"))
-
-from normalization import normalize_clinical_text
-from preprocessing.section_detector import detect_sections, is_in_medication_section, is_in_history_section
-from preprocessing.rule_extractor import extract_all_rules
-from ner import NEREnsemble, NERLLMEngine
-from ner.span_merger import merge_mentions, postprocess_mentions, MergedMention
-from ner.position_align import align_all_positions
-from entity_linking import EntityLinker
-from assertion.section_aware import detect_all_assertions
-from postprocessing import postprocess, fix_entity_type, remove_overlapping_entities
-from postprocessing.validator import validate_output, save_output
+from src.normalization import normalize_clinical_text
+from src.preprocessing.section_detector import detect_sections
+from src.preprocessing.rule_extractor import extract_all_rules
+from src.ner import NEREnsemble, NERLLMEngine
+from src.ner.span_merger import merge_mentions, postprocess_mentions, MergedMention
+from src.ner.position_align import align_all_positions
+from src.entity_linking import EntityLinker
+from src.assertion.section_aware import detect_all_assertions
+from src.postprocessing import fix_entity_type
+from src.postprocessing.validator import validate_output, save_output
 
 
 class CompetitionPipeline:
     """Full competition inference pipeline."""
 
-    def __init__(self, config: Dict = None):
+    def __init__(self, config: Optional[Dict] = None):
         self.config = config or {}
-        self.entity_linker = None
+        self.entity_linker: Optional[EntityLinker] = None
         self._loaded = False
 
-    def load(self):
+    def load(self) -> None:
         """Load all components."""
-        print("="*60)
+        print("=" * 60)
         print("LOADING COMPETITION PIPELINE")
-        print("="*60)
+        print("=" * 60)
 
-        # Entity Linking (FAISS + Cross-Encoder)
+        # Load Entity Linking (FAISS + Cross-Encoder)
         print("\n--- Loading Entity Linking ---")
         self.entity_linker = EntityLinker(
-            embedding_model=self.config.get("embedding_model", "BAAI/bge-m3"),
-            cross_encoder_model=self.config.get("cross_encoder_model", "BAAI/bge-reranker-v2-m3"),
+            embedding_model=self.config.get(
+                "embedding_model", "BAAI/bge-m3"
+            ),
+            cross_encoder_model=self.config.get(
+                "cross_encoder_model", "BAAI/bge-reranker-v2-m3"
+            ),
         )
         self.entity_linker.load()
 
         self._loaded = True
         print("\n=== Pipeline Loaded ===")
 
-    def process(self, text: str, use_llm: bool = False, llm_model: str = "qwen2.5:7b") -> List[Dict]:
-        """Process a single text through the full pipeline."""
+    def process(
+        self, 
+        text: str, 
+        use_llm: bool = False, 
+        llm_model: str = "qwen2.5:7b"
+    ) -> List[Dict]:
+        """
+        Process a single text through the full pipeline.
+        
+        Args:
+            text: Input clinical text
+            use_llm: Whether to use LLM for NER
+            llm_model: LLM model name to use
+            
+        Returns:
+            List of entities
+        """
         if not self._loaded:
             raise RuntimeError("Pipeline not loaded")
 
@@ -65,7 +78,7 @@ class CompetitionPipeline:
         rule_mentions = extract_all_rules(text)
 
         # Step 3: NER (if LLM available)
-        llm_mentions = []
+        llm_mentions: List[MergedMention] = []
         if use_llm:
             try:
                 ner_engine = NERLLMEngine(model=llm_model)
@@ -137,7 +150,12 @@ class CompetitionPipeline:
 
         return entities
 
-    def process_file(self, input_path: str, output_path: str, use_llm: bool = False):
+    def process_file(
+        self, 
+        input_path: str, 
+        output_path: str, 
+        use_llm: bool = False
+    ) -> List[Dict]:
         """Process a single file."""
         with open(input_path, "r", encoding="utf-8") as f:
             text = f.read().strip()
@@ -146,26 +164,33 @@ class CompetitionPipeline:
         save_output(entities, output_path)
         return entities
 
-    def process_batch(self, input_dir: str, output_dir: str, use_llm: bool = False):
+    def process_batch(
+        self, 
+        input_dir: str, 
+        output_dir: str, 
+        use_llm: bool = False
+    ) -> None:
         """Process all .txt files in input_dir."""
-        os.makedirs(output_dir, exist_ok=True)
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
 
-        files = sorted([f for f in os.listdir(input_dir) if f.endswith(".txt")])
+        input_path = Path(input_dir)
+        files = sorted(input_path.glob("*.txt"))
         print(f"\nFound {len(files)} input files")
 
-        for i, filename in enumerate(files):
-            input_path = os.path.join(input_dir, filename)
-            output_filename = filename.replace(".txt", ".json")
-            output_path = os.path.join(output_dir, output_filename)
+        for i, filepath in enumerate(files):
+            output_filename = filepath.stem + ".json"
+            output_filepath = output_path / output_filename
 
-            print(f"\n[{i+1}/{len(files)}] Processing {filename}...")
-            self.process_file(input_path, output_path, use_llm=use_llm)
+            print(f"\n[{i+1}/{len(files)}] Processing {filepath.name}...")
+            self.process_file(str(filepath), str(output_filepath), use_llm=use_llm)
 
         print(f"\n=== Done! {len(files)} files processed ===")
         print(f"Output saved to: {output_dir}")
 
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for competition inference."""
     import argparse
 
     parser = argparse.ArgumentParser(description="Competition Inference Pipeline")
@@ -185,3 +210,7 @@ if __name__ == "__main__":
     pipeline = CompetitionPipeline(config)
     pipeline.load()
     pipeline.process_batch(args.input, args.output, use_llm=args.use_llm)
+
+
+if __name__ == "__main__":
+    main()
